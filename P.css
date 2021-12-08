@@ -1,0 +1,63 @@
+body{
+    background-image: url('681813.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#form{
+   display: flex;
+   justify-content: center; 
+   margin-top: 10%; 
+}
+.form-control{
+    padding: 50px;
+    margin-bottom: 40px;
+}
+
+.form-control input{
+    margin-bottom: 30px;
+}
+#form p{
+    display: inline-block;
+    margin-left: 20px;
+}
+#title{
+    width: 250px;
+    height: 30px;
+    opacity: 0.5;
+    border-radius: 20px;
+    border: 0;
+}
+#autor{
+    width: 250px;
+    height: 30px;
+    opacity: 0.5;
+    border-radius: 20px;
+    border: 0;
+}
+#price{
+    width: 250px;
+    height: 30px;
+    opacity: 0.5;
+    border-radius: 20px;
+    border: 0;
+}
+#date{
+    width: 250px;
+    height: 30px;
+    opacity: 0.5;
+    border-radius: 20px;
+    border: 0;
+}
+#lang{
+    width: 250px;
+    height: 30px;
+    margin-bottom: 30px;
+    opacity: 0.5;
+    border-radius: 20px;
+    border: 0;
+}
+#type-book label{
+    color: white;
+
+}
+
