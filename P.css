@@ -15,6 +15,7 @@ body{
 
 .form-control input{
     margin-bottom: 30px;
+    outline: none;
 }
 #form p{
     display: inline-block;
@@ -25,28 +26,32 @@ body{
     height: 30px;
     opacity: 0.5;
     border-radius: 20px;
-    border: 0;
+    border: solid transparent;
+    border-width: 2px;
 }
 #autor{
     width: 250px;
     height: 30px;
     opacity: 0.5;
     border-radius: 20px;
-    border: 0;
+    border: solid transparent;
+    border-width: 2px;
 }
 #price{
     width: 250px;
     height: 30px;
     opacity: 0.5;
     border-radius: 20px;
-    border: 0;
+    border: solid transparent;
+    border-width: 2px;
 }
 #date{
     width: 250px;
     height: 30px;
     opacity: 0.5;
     border-radius: 20px;
-    border: 0;
+    border: solid transparent;
+    border-width: 2px;
 }
 #lang{
     width: 250px;
@@ -54,7 +59,8 @@ body{
     margin-bottom: 30px;
     opacity: 0.5;
     border-radius: 20px;
-    border: 0;
+    border: solid transparent;
+    border-width: 2px;
 }
 #type-book label{
     color: white;

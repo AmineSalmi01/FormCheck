@@ -1,7 +1,8 @@
 var input = document.getElementsByTagName("input");
 var form = document.getElementsByTagName("form")[0];
 var select = document.getElementById("lang");
-var type = document.getElementsByClassName("type-book")
+var type = document.getElementsByClassName("book")
+var para = document.getElementById("para");
 
 function valider(e){
     e.preventDefault();
@@ -9,10 +10,13 @@ function valider(e){
         if(input[i].value==''){
            input[i].nextElementSibling.innerHTML = "no"
            input[i].nextElementSibling.style.color = "red"
+           input[i].style.borderColor = "red"
+           
         }
         else{
             input[i].nextElementSibling.innerHTML = "yes"
             input[i].nextElementSibling.style.color = "green"
+            input[i].style.borderColor = "green"
         }
     }
 
@@ -42,21 +46,23 @@ function valider(e){
     if(select.value == ""){
         select.nextElementSibling.innerHTML = "select a language"
         select.nextElementSibling.style.color = "red"
+        select.style.borderColor = "red"
     }
     else{
         select.nextElementSibling.innerHTML = "yes"
         select.nextElementSibling.style.color = "green"
+        select.style.borderColor = "green"
     }
-    for(i=0;type<type_book.length;i++){
-        if(type_book[i].type){
-            type = true;
+
+    for(i=0;i<type.length;i++){
+        if(type[i].checked){
+            para.innerHTML = "yes"
+            para.style.color = "green"
             break;
         }
         else{
-            type= false;
-        }
-        if(type){
-            type.ge
+            para.innerHTML = "no"
+            para.style.color = "red"
         }
     }
 }
