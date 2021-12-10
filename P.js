@@ -47,7 +47,7 @@ function valider(e){
     else if(Number(input[2].value<0)){
         input[2].nextElementSibling.innerHTML = "positive number"
         input[2].nextElementSibling.style.color = "red"
-        form_valid++;
+        form_valid++;   
     }
      
     // language
@@ -63,7 +63,7 @@ function valider(e){
         select.style.borderColor = "green"
     }
     var is_checked = false;
-    for(i=0;i<type.length;i++){
+    for(i=0;i<type.length;i++){     
         if(type[i].checked){
             is_checked = true;
             break;
@@ -90,7 +90,15 @@ function valider(e){
         tr.insertCell(3).innerHTML = input[3].value;
         tr.insertCell(4).innerHTML = select.value;
         tr.insertCell(5).innerHTML = type[0].value;
+        tr.insertCell(6).innerHTML = "<input type= 'button' class= 'delete_btn' onclick= 'delete_row(this)'>"
     }
+    // delete button
+    function delete_row(r){
+        var i = r.parentNode.parentNode.rowIndex;
+        table.delete_row(i)
+    }
+    
+    
 }
 
 form.addEventListener("submit", valider);
