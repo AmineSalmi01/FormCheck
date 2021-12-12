@@ -118,8 +118,10 @@ function valider(e){
 
 // delete button
 function myDelete(r){
-    var i = r.parentNode.parentNode.rowIndex;
-    table.deleteRow(i)
+    if(confirm("sure?")){
+        var i = r.parentNode.parentNode.rowIndex;
+        table.deleteRow(i)
+    }
 }
 
 // edit button
@@ -156,7 +158,7 @@ else{
             break;
         }
     }
-    editing.value = "edit"
+    editing.value = "Edit"
     document.getElementById('submit').removeAttribute("disabled");
 }
 
