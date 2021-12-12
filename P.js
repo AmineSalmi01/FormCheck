@@ -89,16 +89,79 @@ function valider(e){
         tr.insertCell(2).innerHTML = input[2].value;
         tr.insertCell(3).innerHTML = input[3].value;
         tr.insertCell(4).innerHTML = select.value;
-        tr.insertCell(5).innerHTML = type[0].value;
-        tr.insertCell(6).innerHTML = "<input type= 'button' class= 'delete_btn' onclick= 'delete_row(this)'>"
+        tr.insertCell(5).innerHTML = "<input type='button' class='delete_btn' onclick=' myDelete(this)' value='delete'><input type='button' class='edit_btn' onclick='edit_row(this)' value='Edit'>"
+
+        var type2=false;
+        for(var i=0;i<type.length;i++){
+            if(type[i].checked){
+                tr.insertCell(5).innerHTML = type[i].value;
+                break;
+            }
+        }
+        
     }
-    // delete button
-    function delete_row(r){
-        var i = r.parentNode.parentNode.rowIndex;
-        table.delete_row(i)
-    }
-    
-    
+    input[0].value = "";
+    input[1].value = "";
+    input[2].value = "";
+    input[3].value = "";
+    select.value = "";
+
+    for(var i=0;i<type.length;i++){
+        if(type[i].checked==true){
+            type[i].checked = false
+            break;
+        } 
 }
+
+
+}
+
+// delete button
+function myDelete(r){
+    var i = r.parentNode.parentNode.rowIndex;
+    table.deleteRow(i)
+}
+
+// edit button
+function edit_row(editing){
+    var i = editing.parentNode.parentNode.rowIndex;
+    var row = table.rows[i];
+
+    if(editing.value=="Edit"){
+     input[0].value = row.cells[0].innerHTML;
+     input[1].value = row.cells[1].innerHTML;
+     input[2].value = row.cells[2].innerHTML;
+     input[3].value = row.cells[3].innerHTML;
+     select.value = row.cells[4].innerHTML;
+
+    for(var i=0;i<3;i++){
+     if(type[i].value==row.cells[5].innerHTML){
+         type[i].checked = true;
+         break;
+        }
+        editing.value = "Save";
+        document.getElementById('submit').setAttribute("disabled","true");
+}
+}
+else{
+    row.cells[0].innerHTML = input[0].value
+    row.cells[1].innerHTML = input[1].value
+    row.cells[2].innerHTML = input[2].value
+    row.cells[3].innerHTML = input[3].value
+    row.cells[4].innerHTML = select.value
+
+    for(var i=0;i<3;i++){
+        if(type[i].checked){
+            row.cells[5].innerHTML = type[i].value
+            break;
+        }
+    }
+    editing.value = "edit"
+    document.getElementById('submit').removeAttribute("disabled");
+}
+
+
+}
+
 
 form.addEventListener("submit", valider);
