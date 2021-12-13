@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="P.css">
+    <link href="http://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
+    <h1>Hogwarts Library</h1>
    <form id="form">
        <div class="form-control">
+
            <input type="text" placeholder="Enter your books title" id="title">
            <p></p> <br>
            <input type="text" placeholder="Enter the name of author" id="autor">
@@ -28,34 +31,36 @@
 
             <div id="type-book">
              <input type="radio" placeholder="enter you type of the book" name="book" class="book" value="Roman">
-             <label for="Roman">Roman</label>
+             <label for="Roman">Novel</label>
 
              <input type="radio" placeholder="enter you type of the book" name="book" class="book" value="Essai">
-             <label for="Essai">Essai</label>
+             <label for="Essai">Essay</label>
 
              <input type="radio" placeholder="enter you type of the book" name="book" class="book" value="Bande-Dessinée">
-             <label for="Bande">Bande-Dessinée</label><br>
+             <label for="Bande">Comics</label><br>
             <p id="para"></p></div>
             
 
             <button id="submit">SUBMIT</button>
 
-            <table id="table" border="1" width = "50%">
-                <tr>
-                    <td>titlle</td>
-                    <td>author</td>
-                    <td>price</td>
-                    <td>date</td>
-                    <td>language</td>
-                    <td>type</td>
-                    <td>delete</td>
-                </tr>
-            </table>
+            
 
        </div>
 
        
    </form>
+
+   <table id="table" width = "50%">
+    <tr>
+        <td>titlle</td>
+        <td>author</td>
+        <td>price</td>
+        <td>date</td>
+        <td>language</td>
+        <td>type</td>
+        <td>delete</td>
+    </tr>
+  </table>
 
    <script src="P.js"></script>
 </body>

@@ -11,14 +11,14 @@ function valider(e){
     e.preventDefault();
     for(i=0;i<input.length-3;i++){
         if(input[i].value==''){
-           input[i].nextElementSibling.innerHTML = "no"
+           input[i].nextElementSibling.innerHTML = "please fill this field"
            input[i].nextElementSibling.style.color = "red"
            input[i].style.borderColor = "red"
            form_valid++;
             
         }
         else{
-            input[i].nextElementSibling.innerHTML = "yes"
+            input[i].nextElementSibling.innerHTML = "done"
             input[i].nextElementSibling.style.color = "green"
             input[i].style.borderColor = "green"
         }
@@ -42,11 +42,13 @@ function valider(e){
     if(isNaN(Number(input[2].value))){
         input[2].nextElementSibling.innerHTML = "enter a number"
         input[2].nextElementSibling.style.color = "red"
+        input[2].style.borderColor = "red"
         form_valid++;
     }
     else if(Number(input[2].value<0)){
         input[2].nextElementSibling.innerHTML = "positive number"
         input[2].nextElementSibling.style.color = "red"
+        input[2].style.borderColor = "red"
         form_valid++;   
     }
      
@@ -58,7 +60,7 @@ function valider(e){
         form_valid++;
     }
     else{
-        select.nextElementSibling.innerHTML = "yes"
+        select.nextElementSibling.innerHTML = "done"
         select.nextElementSibling.style.color = "green"
         select.style.borderColor = "green"
     }
@@ -73,11 +75,11 @@ function valider(e){
         }
     }
     if(is_checked){
-        para.innerHTML = "ok";
+        para.innerHTML = "done";
         para.style.color = "green";
     }
     else{
-        para.innerHTML = "no";
+        para.innerHTML = "please select a type";
         para.style.color = "red";
         form_valid++;
     }
