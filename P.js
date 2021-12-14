@@ -25,14 +25,14 @@ function valider(e){
     }
 
     // title validation
-    if(input[0].value.length>3){
+    if(input[0].value.length>25){
         input[0].nextElementSibling.innerHTML = "too big"
         input[0].nextElementSibling.style.color = "red"
         form_valid++;
     }
     
     // author validation
-    if(input[1].value.length>3){
+    if(input[1].value.length>25){
         input[1].nextElementSibling.innerHTML = "too big"
         input[1].nextElementSibling.style.color = "red"
         form_valid++;
@@ -152,7 +152,7 @@ else{
     row.cells[1].innerHTML = input[1].value
     row.cells[2].innerHTML = input[2].value
     row.cells[3].innerHTML = input[3].value
-    row.cells[4].innerHTML = select.value
+    row.cells[4].innerHTML = select.value   
 
     for(var i=0;i<3;i++){
         if(type[i].checked){
